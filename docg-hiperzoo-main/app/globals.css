@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --teal: #25b8c5;
+  --teal-dark: #0e6f78;
+  --teal-soft: #e6f7f9;
+  --ink: #1f2a33;
+  --muted: #5b6b78;
+  --cloud: #f3f5f7;
+  --wa: #25d366;
+}
+
+@theme inline {
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-soft: var(--teal-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-cloud: var(--cloud);
+  --color-wa: var(--wa);
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--teal);
+  color: #fff;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: 32px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 14px 24px;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-wa {
+  background: var(--wa);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px rgba(37, 211, 102, 0.7);
+}
+
+.btn-wa:hover {
+  background: #1fc45b;
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px rgba(37, 184, 197, 0.7);
+}
+
+.btn-teal:hover {
+  background: #1ea9b6;
+}
+
+.btn-ghost {
+  background: #fff;
+  color: var(--teal-dark);
+  border: 2px solid var(--teal-soft);
+}
+
+.btn-ghost:hover {
+  border-color: var(--teal);
+}
+
+.dots-bg {
+  background-image: radial-gradient(rgba(37, 184, 197, 0.18) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
